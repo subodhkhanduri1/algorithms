@@ -40,6 +40,10 @@ class QuickSorter
 
       break if index == pivot_index
 
+      t = pivot_index
+      pivot_index = index
+      index = t
+
       search_for_greater = !search_for_greater
     end
 
@@ -58,10 +62,6 @@ class QuickSorter
 
     swap_in_array(index, pivot_index)
 
-    t = pivot_index
-    pivot_index = index
-    index = t
-
     index
   end
 
@@ -76,10 +76,6 @@ class QuickSorter
     return index if index == pivot_index
 
     swap_in_array(index, pivot_index)
-
-    t = pivot_index
-    pivot_index = index
-    index = t
 
     index
   end
